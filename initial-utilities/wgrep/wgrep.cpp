@@ -32,6 +32,8 @@ int main(int argc, char *argv[]){
 			line = "";
 		}
 	}
+	if(line.find(argv[1], 0) != std::string::npos)
+		write(STDOUT_FILENO, line.c_str(), line.size());
 	
 	close(fd);
 	exit(0);
