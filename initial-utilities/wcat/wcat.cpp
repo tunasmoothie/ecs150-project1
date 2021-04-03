@@ -19,15 +19,12 @@ int main(int argc, char *argv[]){
 			exit(1);
 		}
 	
-		memset(buf, 0, 1024);
-		
 		while((rdRtr = read(fd, buf, 1024)) > 0){
 			write(STDOUT_FILENO, buf, rdRtr);
 		}
 	
 		close(fd);
-		
 	}
 		
-	return 0;
+	exit(0);
 }
